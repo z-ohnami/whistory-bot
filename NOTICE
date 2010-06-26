@@ -1,0 +1,11 @@
+whistory-bot
+ Copyright 2010 z.ohnami
+
+ This product includes the following third-party components:
+
+  * oauth.py 
+    Copyright 2010,Mike Knapp <http://github.com/mikeknapp/AppEngine-OAuth-Library> 
+
+  * simplejson 2.1.1
+    Copyright 2010,Bob Ippolito <bob at redivi com> <http://pypi.python.org/pypi/simplejson/> 
+

@@ -1,0 +1,15 @@
+application: whistory-bot
+version: 2
+runtime: python
+api_version: 1
+
+handlers:
+- url: /bot_action
+  script: main.py
+  login: admin
+- url: /remote_api
+  script: $PYTHON_LIB/google/appengine/ext/remote_api/handler.py
+  login: admin
+- url: /.*
+  script: main.py
+

@@ -1,0 +1,4 @@
+cron:
+- description: tweet history
+  url: /bot_action?action=update
+  schedule: every 4 hours

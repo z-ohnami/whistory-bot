@@ -1,0 +1,39 @@
+whistory-bot
+===================== 
+
+1.Purpose
+ This software is a kind of GAE application.It runs as backend job for Twitter account "whistbot"(http://twitter.com/whistbot).
+ "whistbot" tells us some links to "Sekaishi kogiroku"(http://www.geocities.jp/timeway/).We can learn world history from "Sekaishi kogiroku".
+ But I'm lazy,can't visit & continue to learn this site every day !!So I made this software as reminder.
+
+2.Files
+ main.py  --  to run this application
+ model.py -- data models Lecture,LectOrder
+ msg.py  -- access datastore & generate tweet message
+ twitbot.py -- tweet message to Twitter
+ loader  --  load data "kougiroku titles"
+ config.yaml  --  include OAuth data
+ cron.yaml  --  controll GAE job
+ app.yaml -- GAE application settings
+
+3.Installation
+
+ a.regist Twitter application
+
+ b.upload application
+   $appcfg.py update whistory-bot
+
+ c.load data from lecture.csv
+   $cd loader
+   $appcfg.py upload_data --config_file=loader.py --filename=lecture.csv --kind=Lecture whistory-bot
+
+ If you want to test,do like this.
+ 
+ b'.run application
+   $dev_appserver.py whistory-bot
+
+ c'.load data from lecture.csv
+   $PYTHONPATH=. appcfg.py upload_data --config_file=loader.py --filename=lecture.csv --kind=Lecture --url=http://localhost:8080/remote_api whistory-bot
+
+ For more detail,see the official site http://code.google.com/intl/ja/appengine/
+
